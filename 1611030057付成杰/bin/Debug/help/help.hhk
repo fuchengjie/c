@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="登录：">
+		<param name="Local" value="help\outline_0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="基本信息->用户信息">
+		<param name="Local" value="help\outline_1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="进货管理->商品进货：">
+		<param name="Local" value="help\outline_2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="销售管理->商品销售：">
+		<param name="Local" value="help\outline_3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="库存管理->库存查询：">
+		<param name="Local" value="help\outline_4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="关于系统->软件信息：">
+		<param name="Local" value="help\outline_5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="关于系统->帮助文档：">
+		<param name="Local" value="help\outline_6.htm">
+		</OBJECT>
+</UL>
+</BODY>
+</HTML>
+
