@@ -1,6 +1,6 @@
 # c  
 开发环境 access13.0  
-        vs2017  
+        vs community2017  
         Win10
         
           
