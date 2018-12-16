@@ -42,6 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.group = new System.Windows.Forms.GroupBox();
+            this.txt_role = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_login_name = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_role = new System.Windows.Forms.ComboBox();
             this.group.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -185,6 +185,18 @@
             this.group.TabIndex = 14;
             this.group.TabStop = false;
             // 
+            // txt_role
+            // 
+            this.txt_role.FormattingEnabled = true;
+            this.txt_role.Items.AddRange(new object[] {
+            "普通员工",
+            "管理员"});
+            this.txt_role.Location = new System.Drawing.Point(93, 80);
+            this.txt_role.Name = "txt_role";
+            this.txt_role.Size = new System.Drawing.Size(169, 23);
+            this.txt_role.TabIndex = 12;
+            this.txt_role.Text = "普通员工";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(365, 155);
@@ -296,18 +308,6 @@
             this.groupBox2.Size = new System.Drawing.Size(159, 221);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
-            // 
-            // txt_role
-            // 
-            this.txt_role.FormattingEnabled = true;
-            this.txt_role.Items.AddRange(new object[] {
-            "普通员工",
-            "管理员"});
-            this.txt_role.Location = new System.Drawing.Point(93, 80);
-            this.txt_role.Name = "txt_role";
-            this.txt_role.Size = new System.Drawing.Size(169, 23);
-            this.txt_role.TabIndex = 12;
-            this.txt_role.Text = "普通员工";
             // 
             // frm_emp_info
             // 

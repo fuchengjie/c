@@ -20,13 +20,7 @@ namespace _1611030057付成杰
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //if(txt_old_passwd.Text.Trim().Equals(Frm_login.passwd)==false)
-            //{
-            //    MessageBox.Show("原密码错误！");
-            //    return;
-            //}
-
-            if (txt_new_passwd.Text.Equals(""))
+            if (txt_new_passwd.Text.Trim().Length == 0)
             {
                 MessageBox.Show("请输入新密码！");
                 return;

@@ -22,19 +22,19 @@ namespace _1611030057付成杰
         {
             this.BackgroundImageLayout = ImageLayout.Stretch;
             this.BackgroundImage = Image.FromFile("main.jpg");
-            
+
+            //设置定时器
             timer1.Enabled = true;
             timer1.Interval = 1000;
-            
+
+            //状态栏显示
             toolStripStatusLabel1.Text = "当前用户：" + Frm_login.name;
             toolStripStatusLabel2.Text = "用户角色：" + Frm_login.role;
-
-
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            
+
             toolStripStatusLabel3.Text = "当前时间：" + DateTime.Now.ToString("F");
         }
 
@@ -58,16 +58,13 @@ namespace _1611030057付成杰
 
         private void 员工信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Frm_login.role.Equals("普通员工"))
+            if (Frm_login.role.Equals("管理员") == false)
             {
                 MessageBox.Show("无权限...只有管理员才能进入...");
                 return;
             }
 
-            frm_emp_info frm = new frm_emp_info
-            {
-                Owner = this
-            };
+            frm_emp_info frm = new frm_emp_info();
             frm.ShowDialog();
         }
 
@@ -114,13 +111,8 @@ namespace _1611030057付成杰
 
         private void 信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frm_info frm = new frm_info();
-            //frm.ShowDialog();
-            //frm.Owner = this;
-
             AboutBox1 ab = new AboutBox1();
             ab.ShowDialog();
-
         }
 
         private void 帮助文档ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,8 +146,10 @@ namespace _1611030057付成杰
         {
             System.Diagnostics.Process.Start("calc.exe");
         }
+
+        //这个是调用windows的系统锁定，可以注销当前Windows用户，回到登录界面
         [DllImport("user32 ")]
-        public static extern bool LockWorkStation();//这个是调用windows的系统锁定 
+        public static extern bool LockWorkStation();
 
         private void button4_Click(object sender, EventArgs e)
         {

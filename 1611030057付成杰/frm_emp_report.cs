@@ -16,7 +16,6 @@ namespace _1611030057付成杰
     {
         DataSet ds;
         OleDbDataAdapter da;
-        publicClass.getSqlConnection get;
         OleDbConnection conn;
         OleDbCommand cmd;
         DataTable dt;

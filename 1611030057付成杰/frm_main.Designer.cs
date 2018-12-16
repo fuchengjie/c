@@ -32,14 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_main));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.基本档案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.员工信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +48,14 @@
             this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助文档ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -80,90 +80,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(464, 48);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1295, 32);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(82, 27);
-            this.toolStripStatusLabel1.Text = "当前用户";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 27);
-            this.toolStripStatusLabel2.Text = "用户角色";
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(78, 27);
-            this.toolStripStatusLabel3.Text = "当前时间";
-            // 
-            // button4
-            // 
-            this.button4.Image = global::_1611030057付成杰.Properties.Resources._lock;
-            this.button4.Location = new System.Drawing.Point(32, 176);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 47);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "锁屏";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::_1611030057付成杰.Properties.Resources.ico_calc;
-            this.button3.Location = new System.Drawing.Point(32, 102);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 47);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "计算器";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Image = global::_1611030057付成杰.Properties.Resources.logout2;
-            this.button2.Location = new System.Drawing.Point(32, 324);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 47);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "退出系统";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Image = global::_1611030057付成杰.Properties.Resources.outgoing;
-            this.button1.Location = new System.Drawing.Point(32, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 47);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "重新登录";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // 基本档案ToolStripMenuItem
             // 
@@ -299,6 +215,90 @@
             this.帮助文档ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.帮助文档ToolStripMenuItem.Text = "帮助文档";
             this.帮助文档ToolStripMenuItem.Click += new System.EventHandler(this.帮助文档ToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1295, 32);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(82, 27);
+            this.toolStripStatusLabel1.Text = "当前用户";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 27);
+            this.toolStripStatusLabel2.Text = "用户角色";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(78, 27);
+            this.toolStripStatusLabel3.Text = "当前时间";
+            // 
+            // button4
+            // 
+            this.button4.Image = global::_1611030057付成杰.Properties.Resources._lock;
+            this.button4.Location = new System.Drawing.Point(45, 170);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(92, 47);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "锁屏";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::_1611030057付成杰.Properties.Resources.ico_calc;
+            this.button3.Location = new System.Drawing.Point(45, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(92, 47);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "计算器";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::_1611030057付成杰.Properties.Resources.logout2;
+            this.button2.Location = new System.Drawing.Point(45, 318);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 47);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "退出系统";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::_1611030057付成杰.Properties.Resources.outgoing;
+            this.button1.Location = new System.Drawing.Point(45, 244);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 47);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "重新登录";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_main
             // 

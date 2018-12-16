@@ -17,7 +17,15 @@ namespace _1611030057付成杰
         {
             InitializeComponent();
         }
+        private void frm_passwd_modify_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.LightBlue;
 
+            //密码样式
+            txt_new_passwd.PasswordChar = '*';
+            txt_old_passwd.PasswordChar = '*';
+            txt_old_passwd.Focus();
+        }
         private void Btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -27,7 +35,7 @@ namespace _1611030057付成杰
         {
             if (txt_old_passwd.Text.Trim().Equals(Frm_login.passwd) == false)
             {
-                MessageBox.Show("原密码错误！");
+                MessageBox.Show("原密码错误！请重新输入");
                 return;
             }
 
@@ -36,29 +44,33 @@ namespace _1611030057付成杰
                 MessageBox.Show("请输入新密码！");
                 return;
             }
-            string sqlstr = "update tb_EmpInfo set emp_login_passwd='"+txt_new_passwd.Text.Trim()+"'"
-                +"where emp_login_name='"+Frm_login.name+"'";
-            try
+            
+            string sqlstr =
+                "update tb_EmpInfo set emp_login_passwd=@txt_new_passwd where emp_login_name=@name";
+
+            OleDbParameter[] parameters = new OleDbParameter[]
             {
-                publicClass.getSqlConnection get = new publicClass.getSqlConnection();
-                OleDbConnection conn = get.GetCon();
-                OleDbCommand cmd = new OleDbCommand(sqlstr,conn);
-                OleDbDataAdapter da = new OleDbDataAdapter();
-                
-                cmd.ExecuteNonQuery();
+                new OleDbParameter("@txt_new_passwd",txt_new_passwd.Text.Trim()),
+                new OleDbParameter("@name",Frm_login.name)
+            };
+
+            //修改密码
+            OleDbConnection conn = new OleDbConnection(Frm_login.connectStr);
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = sqlstr;
+            cmd.Connection = conn;
+            cmd.Parameters.Add(parameters);
+            if (cmd.ExecuteNonQuery() > 0)
+            {
                 MessageBox.Show("密码修改成功");
-                this.Close();
+                return;
             }
-            catch(Exception ee)
+            else
             {
-                MessageBox.Show(ee.ToString());
+                MessageBox.Show("密码修改失败，请联系程序制作者...");
+                return;
             }
 
-        }
-
-        private void frm_passwd_modify_Load(object sender, EventArgs e)
-        {
-            this.BackColor = Color.LightBlue;
         }
     }
 }

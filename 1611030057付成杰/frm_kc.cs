@@ -15,11 +15,10 @@ namespace _1611030057付成杰
     {
         DataSet ds;
         OleDbDataAdapter da;
-        publicClass.getSqlConnection get;
         OleDbConnection conn;
         OleDbCommand cmd;
-        //DataTable dt;
-        string conststr = "select goods_id as 商品编号,rep_emp as 进货人,rep_goods_name as 商品名称," +
+        string conststr =
+            "select goods_id as 商品编号,rep_emp as 进货人,rep_goods_name as 商品名称," +
             "rep_num as 库存数量,rep_goods_price as 进货单价,rep_sell_price as 销售价格,rep_time as" +
             " 进货时间,rep_remark as 备注 from tb_KcGoods";
 
@@ -27,7 +26,6 @@ namespace _1611030057付成杰
         {
             InitializeComponent();
         }
-
         private void frm_kc_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -42,50 +40,54 @@ namespace _1611030057付成杰
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            try
+            {
+                da = new OleDbDataAdapter();
+                conn = new OleDbConnection(Frm_login.connectStr);
+                conn.Open();
+                cmd = new OleDbCommand();
+                cmd.Connection = conn;
+                ds = new DataSet();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("程序出错了" + ee.ToString());
+            }
 
-            get = new publicClass.getSqlConnection();
-            conn = get.GetCon();
-            cmd = new OleDbCommand(conststr, conn);
-            ds = new DataSet();
-            da = new OleDbDataAdapter();
+            cmd.CommandText = conststr;
             da.SelectCommand = cmd;
-
+            ds.Clear();
             da.Fill(ds, "tb_KcGoods");
             dataGridView1.DataSource = ds.Tables["tb_KcGoods"];
-
-            conn.Dispose();
-            cmd.Dispose();
-            da.Dispose();
-            ds.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string str = conststr + " where rep_goods_name='" + textBox1.Text.Trim() + "'";
-
-            get = new publicClass.getSqlConnection();
-            conn = get.GetCon();
-            cmd = new OleDbCommand(str, conn);
-            ds = new DataSet();
-            da = new OleDbDataAdapter();
+            cmd.CommandText = str;
             da.SelectCommand = cmd;
-
+            ds.Clear();
             da.Fill(ds, "tb_KcGoods");
             dataGridView1.DataSource = ds.Tables["tb_KcGoods"];
-
-            conn.Dispose();
-            cmd.Dispose();
-            da.Dispose();
-            ds.Dispose();
         }
 
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = conststr;
+            da.SelectCommand = cmd;
+            ds.Clear();
+            da.Fill(ds, "tb_KcGoods");
+            dataGridView1.DataSource = ds.Tables["tb_KcGoods"];
+        }
         private void frm_kc_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (da != null)
             {
                 da.Dispose();
-            }            
-            if (conn != null)
+            }
+            if (conn.State == ConnectionState.Open)
             {
                 conn.Dispose();
             }
@@ -97,24 +99,6 @@ namespace _1611030057付成杰
             {
                 cmd.Dispose();
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            get = new publicClass.getSqlConnection();
-            conn = get.GetCon();
-            cmd = new OleDbCommand(conststr, conn);
-            ds = new DataSet();
-            da = new OleDbDataAdapter();
-            da.SelectCommand = cmd;
-
-            da.Fill(ds, "tb_KcGoods");
-            dataGridView1.DataSource = ds.Tables["tb_KcGoods"];
-
-            conn.Dispose();
-            cmd.Dispose();
-            da.Dispose();
-            ds.Dispose();
         }
     }
 }
