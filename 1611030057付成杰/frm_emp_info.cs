@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using _1611030057付成杰.publicClass;
+
 
 namespace _1611030057付成杰
 {
@@ -62,8 +64,6 @@ namespace _1611030057付成杰
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
-            
             if (txt_name.Text.Equals(""))
             {
                 MessageBox.Show("用户名字未输入");
@@ -250,11 +250,8 @@ namespace _1611030057付成杰
                 da.Fill(ds, "tb_EmpInfo");
                 dt = ds.Tables["tb_EmpInfo"];
 
-
                 dataGridView1.DataSource = dt;
             }
-
-
         }
 
         private void Frm_emp_info_FormClosing(object sender, FormClosingEventArgs e)

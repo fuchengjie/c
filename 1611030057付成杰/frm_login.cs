@@ -18,20 +18,16 @@ namespace _1611030057付成杰
         public static string passwd = "";
         public Frm_login()
         {
-            InitializeComponent();this.CenterToScreen();
+            InitializeComponent(); this.CenterToScreen();
         }
 
         private void Frm_login_Load(object sender, EventArgs e)
         {
-            
-            
-
             this.MaximizeBox = false;
 
             this.BackgroundImage = Image.FromFile("login.jpg");
             this.BackgroundImageLayout = ImageLayout.Stretch;
             //this.BackgroundImageLayout = ImageLayout.Center;
-
 
             btn_ok.Focus();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -39,7 +35,7 @@ namespace _1611030057付成杰
 
         private void Btn_ok_Click(object sender, EventArgs e)
         {
-            if(txt_id.Text=="")
+            if (txt_id.Text == "")
             {
                 MessageBox.Show("用户名不能为空");
                 return;
@@ -65,7 +61,7 @@ namespace _1611030057付成杰
                 name = txt_id.Text.Trim();
                 passwd = txt_passwd.Text.Trim();
 
-                cmd.CommandText= "select emp_role from tb_EmpInfo where emp_login_name='" + txt_id.Text
+                cmd.CommandText = "select emp_role from tb_EmpInfo where emp_login_name='" + txt_id.Text
                 + "'" + " and emp_login_passwd='" + txt_passwd.Text + "'";
 
                 //得到用户角色
@@ -89,7 +85,7 @@ namespace _1611030057付成杰
 
         private void Frm_login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
         }
     }
 }
